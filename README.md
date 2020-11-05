@@ -7,22 +7,33 @@
 http://demo.55youtao.com/
 
 导入mysql文件 ks.sql
+
 更改mysql 配置密码
+
 config/adatabase.php
 
 生成docx 和pdf  使用了pywin32所以只能在windos上面跑
+
 安装 python 3.9
+
 导入pywin32,requests 包
+
 更改py/test.py文件里
+
 domainname = "http://demo.com/" #网站域名
+
 websitedirectory = "D:/wamp/web/ks/public" #网站public目录
+
 执行 py/test.py #  
 
 开发工具自己选择，，
 
 后台地址
+
 http://demo.55youtao.com/admin/
+
 用户：admin
+
 密码:admin
 
 后续版本运行目录: public/（请务必将域名解析到public目录，通过域名来访问项目。用“域名+public”来访问，会导致页面错乱）
