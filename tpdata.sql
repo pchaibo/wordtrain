@@ -786,11 +786,11 @@ CREATE TABLE `user_question` (
   `word_url` varchar(200) DEFAULT NULL,
   `status` int(1) DEFAULT 0 COMMENT '0,滑有生成;1:已成生',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user_question` */
 
-insert  into `user_question`(`id`,`questions`,`userid`,`num`,`addtime`,`word_url`,`status`) values (5,'5,4,3,2',3,4,1604148024,'3_1604148024',1),(3,'5,3',3,3,1604063969,'3_1604063969',1),(4,'5,4,3',3,3,1604147696,'3_1604147696',1),(6,'5,4,3,2',3,4,1604559701,'3_1604559701',1);
+insert  into `user_question`(`id`,`questions`,`userid`,`num`,`addtime`,`word_url`,`status`) values (5,'5,4,3,2',3,4,1604148024,'3_1604148024',1),(3,'5,3',3,3,1604063969,'3_1604063969',1),(4,'5,4,3',3,3,1604147696,'3_1604147696',1),(6,'5,4,3,2',3,4,1604559701,'3_1604559701',1),(7,'5,3',3,2,1604589818,'3_1604589818',1),(8,'5,4',3,2,1604591518,'3_1604591518',1),(9,'4,3,2',3,3,1604592043,'3_1604592043',1);
 
 /*Table structure for table `users` */
 
