@@ -1,0 +1,27 @@
+ <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="user">
+        <li class="layui-nav-item">
+            <a href="{:url('index/index')}">
+                <i class="layui-icon">&#xe609;</i>
+                我的主页
+            </a>
+        </li>
+      
+        <li class="layui-nav-item {if($nav==2)}layui-this{/if}">
+            <a href="{:url('selectedtopic/index')}">
+                <i class="layui-icon">&#xe681;</i>
+                训练选题
+            </a>
+        </li>
+        <li class="layui-nav-item {if($nav==3)}layui-this{/if}">
+            <a href="{:url('selectedtopic/userquestion')}">
+                <i class="layui-icon">&#xe601;</i>
+                提交目题
+            </a>
+        </li>
+          <li class="layui-nav-item {if($nav==1)}layui-this{/if}">
+            <a href="{:url('set/index')}">
+                <i class="layui-icon">&#xe620;</i>
+                基本设置
+            </a>
+        </li>
+    </ul>

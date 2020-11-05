@@ -1,0 +1,177 @@
+{include file="common/head"/}
+<div class="admin-main layui-anim layui-anim-upbit" ng-app="hd" ng-controller="ctrl">
+    <fieldset class="layui-elem-field layui-field-title">
+        <legend>{$title}</legend>
+    </fieldset>
+    <form class="layui-form layui-form-pane">
+        <div class="layui-form-item">
+            <label class="layui-form-label">训练类型</label>
+            <div class="layui-input-4">
+                <select name="typeid" lay-verify="required" ng-model="field.typeid" ng-options="v.id as v.title for v in group" ng-selected="v.id==field.typeid">
+                    <option value="">请选择训练类型</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">训练难度</label>
+            <div class="layui-input-4">
+                <select name="level" lay-verify="required" ng-model="field.level" ng-options="v.id as v.level_name for v in level" ng-selected="v.id==field.level">
+                    <option value="">请选择训练练难度</label</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">{:lang('questions')}</label>
+            <div class="layui-input-4">
+                <input type="text" name="question" ng-model="field.question" lay-verify="required" placeholder="{:lang('pleaseEnter')}{:lang('questions')}" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">{:lang('questionsfile')}</label>
+          
+           <div class="layui-input-3">
+                <input type="text" name="questionurl" id="questionurl" ng-model="field.questionurl" lay-verify="required" placeholder="{:lang('pleaseEnter')}{:lang('questionsfile')}" class="layui-input">
+            </div>
+			<div class="layui-input-block">
+              <div class="layui-upload">
+                  <button type="button" class="layui-btn layui-btn-primary" id="question"><i class="icon icon-upload3"></i>点击上传</button>
+              </div>
+		   </div>
+        </div>
+        
+      
+        
+        
+      <div class="layui-form-item">
+            <label class="layui-form-label">{:lang('questions_answer')}</label>
+            <div class="layui-input-3">
+                <input type="text" name="answerurl" id="answerurl" ng-model="field.answerurl" lay-verify="required" placeholder="{:lang('pleaseEnter')}{:lang('questions_answer')}" class="layui-input">
+            </div>
+            <div class="layui-input-block">
+              <div class="layui-upload">
+                  <button type="button" class="layui-btn layui-btn-primary" id="answer"><i class="icon icon-upload3"></i>点击上传</button>
+              </div>
+		   </div>
+        </div>
+        
+          
+      
+      
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">状态</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="is_lock" ng-model="field.is_lock" ng-checked="field.is_lock==0" ng-value="0" title="正常">
+                    <input type="radio" name="is_lock" ng-model="field.is_lock" ng-checked="field.is_lock==1" ng-value="1" title="{:lang('disabled')}">
+                </div>
+            </div>
+        </div>
+       
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button type="button" class="layui-btn" lay-submit="" lay-filter="submit">{:lang('submit')}</button>
+                <a href="{:url('index')}" class="layui-btn layui-btn-primary">{:lang('back')}</a>
+            </div>
+        </div>
+    </form>
+</div>
+{include file="common/foot"/}
+<script src="/static/common/js/angular.min.js"></script>
+<script>
+    var m = angular.module('hd',[]);
+    m.controller('ctrl',function($scope) {
+       // $scope.field = {$info|raw};
+        $scope.field = '{$info|raw}'!='null'?{$info|raw}:{typeid:'',titie:'',bomlimit:'',toplimit:'',sort:50,is_lock:0};
+        $scope.group = {$questiontype|raw};
+        $scope.level = {$question_level|raw};
+        //$scope.province = {$province|raw};
+       // $scope.city = {$city|raw};
+       // $scope.district = {$district|raw};
+       
+       //
+        layui.use(['form', 'layer','upload','element'], function () {
+           // var form = layui.form, layer = layui.layer,$= layui.jquery;
+            var form = layui.form,layer = layui.layer,upload = layui.upload,$ = layui.jquery,element = layui.element;
+           
+            //普通图片上传
+            var uploadInst = upload.render({
+                elem: '#question'
+               ,accept: 'file'
+               ,exts: 'doc|docx|jpg'
+               ,url: '{:url("UpFiles/upload")}'
+               ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    /*
+                    obj.preview(function(index, file, result){
+                        $('#cltLogo').attr('src', result); //图片链接（base64）
+                    });
+                    */
+                }
+                ,done: function(res){
+                    //上传成功
+                    if(res.code>0){
+                        $('#questionurl').val(res.url);
+                    }else{
+                        //如果上传失败
+                        return layer.msg('上传失败');
+                    }
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#demoText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+            //
+           upload.render({
+                elem: '#answer'
+               ,accept: 'file'
+               ,exts: 'doc|docx|jpg'
+                ,url: '{:url("UpFiles/upload")}'
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                }
+                ,done: function(res){
+                    //上传成功
+                    if(res.code>0){
+                        $('#answerurl').val(res.url);
+                    }else{
+                        //如果上传失败
+                        return layer.msg('上传失败');
+                    }
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#demoText');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+            //
+            form.on('submit(submit)', function (data) {
+                // 提交到方法 默认为本身
+                var loading = layer.load(1, {shade: [0.1, '#fff']});
+                data.field.id = $scope.field.id;
+                $.post("", data.field, function (res) {
+                    layer.close(loading);
+                    if (res.code > 0) {
+                        layer.msg(res.msg, {time: 1800, icon: 1}, function () {
+                            location.href = res.url;
+                        });
+                    } else {
+                        layer.msg(res.msg, {time: 1800, icon: 2});
+                    }
+                });
+            })
+        });
+    });
+    //
+    
+</script>
+</body>
+</html>
