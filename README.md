@@ -27,8 +27,10 @@ websitedirectory = "D:/wamp/web/ks/public" #网站public目录
 执行 py/test.py
 
 ###################
+
 [后台地址](http://demo.55youtao.com/admin/)
 用户：admin
+
 密码:admin
 
 
