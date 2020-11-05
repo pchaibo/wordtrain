@@ -26,24 +26,18 @@ websitedirectory = "D:/wamp/web/ks/public" #网站public目录
 
 执行 py/test.py
 
-开发工具自己选择，，
-
-后台地址
-
-http://demo.55youtao.com/admin/
-
+###################
+[后台地址](http://demo.55youtao.com/admin/)
 用户：admin
 密码:admin
 
-前台用户
+
+[前台地址](http://demo.55youtao.com)
 xiao@qq.com
 密码
 123456
 
 后续版本运行目录: public/（请务必将域名解析到public目录，通过域名来访问项目。用“域名+public”来访问，会导致页面错乱）
-
-> 官网：[webtie官网](http://www.55youtao.com)
-
 ## 目录结构
 
 初始的目录结构如下：
