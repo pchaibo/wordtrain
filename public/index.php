@@ -10,7 +10,7 @@
 // +----------------------------------------------------------------------
 // [ 应用入口文件 ]
 namespace think;
-include 'sqlin.php';
+//include 'sqlin.php';
 define('APP_PATH', __DIR__ . '/../application/');
 // 加载基础文件
 require __DIR__ . '/../thinkphp/base.php';
