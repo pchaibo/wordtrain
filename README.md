@@ -33,9 +33,10 @@ websitedirectory = "D:/wamp/web/ks/public" #网站public目录
 
 
 [前台地址](http://demo.55youtao.com)
-xiao@qq.com
-密码
-123456
+
+用户:xiao@qq.com
+
+密码:123456
 
 后续版本运行目录: public/（请务必将域名解析到public目录，通过域名来访问项目。用“域名+public”来访问，会导致页面错乱）
 ## 目录结构
