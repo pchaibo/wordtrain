@@ -1,6 +1,6 @@
 ##后台生成合并docx和pdf 使用py pywin32包
 
-####测试网站 http://demo.55youtao.com/
+测试网站 http://demo.55youtao.com/
 
 导入mysql文件 ks.sql
 
@@ -28,12 +28,14 @@ websitedirectory = "D:/wamp/web/ks/public" #网站public目录
 执行 py/test.py
 
 [后台地址](http://demo.55youtao.com/admin/)
-######用户：admin 
-######密码:admin
+用户：admin 
+
+密码:admin
 
 [前台地址](http://demo.55youtao.com)
-######用户:xiao@qq.com 
-######密码:123456
+用户:xiao@qq.com 
+
+密码:123456
 
 运行目录: public/（请务必将域名解析到public目录，通过域名来访问项目。用“域名+public”来访问，会导致页面错乱）
 ## 目录结构
