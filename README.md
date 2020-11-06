@@ -13,11 +13,10 @@ config/adatabase.php
 
 安装 python 3.9 导入包
 
-
+``` 
 pip install pywin32
-
 pip install requests 
-
+``` 
 更改py/test.py文件里
 
 ``` py
