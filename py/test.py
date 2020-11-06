@@ -38,7 +38,6 @@ def testdata():
 		#print(url)
 		arr.append(url)
 
-	#print(arr)
 	#print(usersrc)
 	toword.add_docx(arr,userword)
 
@@ -64,9 +63,7 @@ def testdata():
 #循环数据
 counter = 1
 while counter <= 5:
-    #print("5555",counter)
     testdata()
     time.sleep(5)
-   # counter = counter + 1
 
 
