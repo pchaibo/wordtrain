@@ -1,28 +1,30 @@
-
-![image](https://github.com/pchaibo/wordtrain/blob/main/public/static/img/h1.png)
-![前台选题](https://github.com/pchaibo/wordtrain/blob/main/public/static/img/a1.png)
-![前台选题](https://github.com/pchaibo/wordtrain/blob/main/public/static/img/a2.png)
 ##后台生成合并docx和pdf 使用py pywin32包
-
 ####测试网站 http://demo.55youtao.com/
 导入mysql文件 ks.sql
 
 更改mysql 配置密码
 
+```
 config/adatabase.php
 
+```
 生成docx 和pdf  使用了pywin32所以只能在windos上面跑
 
-安装 python 3.9
+##安装 python 3.9 导入包
 
-导入pywin32,requests 包
+```
+pyp install pywin32
+pip install requests 
+
+```
 
 更改py/test.py文件里
 
+```
 domainname = "http://demo.com/" #网站域名
-
 websitedirectory = "D:/wamp/web/ks/public" #网站public目录
 
+```
 执行 py/test.py
 
 ###################
