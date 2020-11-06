@@ -1,4 +1,4 @@
-##后台生成合并docx和pdf 使用py pywin32包
+#后台生成合并docx和pdf 使用py pywin32包
 
 测试网站 http://demo.55youtao.com/
 
@@ -28,11 +28,13 @@ websitedirectory = "D:/wamp/web/ks/public" #网站public目录
 执行 py/test.py
 
 [后台地址](http://demo.55youtao.com/admin/)
+
 用户：admin 
 
 密码:admin
 
 [前台地址](http://demo.55youtao.com)
+
 用户:xiao@qq.com 
 
 密码:123456
