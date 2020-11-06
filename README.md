@@ -1,5 +1,5 @@
 # wordtrain
-使用thinkphp5.1.40开发成合并docx和pdf 
+使用thinkphp5.1.40开发成合并生成docx和pdf 
 
 后台使用py pywin32包
 
