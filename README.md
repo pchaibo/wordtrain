@@ -1,7 +1,6 @@
+## 后台生成合并docx和pdf 使用py pywin32包
 
-#后台生成合并docx和pdf 使用py pywin32包
-
-#测试网站 http://demo.55youtao.com/
+测试网站 http://demo.55youtao.com/
 
 导入mysql文件tpdata.sql
 
@@ -11,7 +10,7 @@ config/adatabase.php
 
 生成docx 和pdf  使用了pywin32所以只能在windos上面跑
 
-##安装 python 3.9 导入包
+安装 python 3.9 导入包
 
 
 pyp install pywin32
