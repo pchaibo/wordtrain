@@ -8,10 +8,8 @@
 
 更改mysql 配置密码
 
-```
 config/adatabase.php
 
-```
 生成docx 和pdf  使用了pywin32所以只能在windos上面跑
 
 ##安装 python 3.9 导入包
