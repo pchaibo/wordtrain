@@ -1,8 +1,8 @@
+
 #后台生成合并docx和pdf 使用py pywin32包
+#测试网站 http://demo.55youtao.com/
 
-测试网站 http://demo.55youtao.com/
-
-导入mysql文件 ks.sql
+导入mysql文件tpdata.sql
 
 更改mysql 配置密码
 
