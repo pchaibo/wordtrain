@@ -17,14 +17,14 @@ pyp install pywin32
 
 pip install requests 
 
-
 更改py/test.py文件里
 
-
+``` py
+#py/test.py 
 domainname = "http://demo.com/" #网站域名
 
 websitedirectory = "D:/wamp/web/ks/public" #网站public目录
-
+``` 
 执行 py/test.py
 
 [后台地址](http://demo.55youtao.com/admin/)
