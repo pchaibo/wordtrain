@@ -32,6 +32,7 @@ websitedirectory = "D:/wamp/web/ks/public" #网站public目录
 
 * 用户:admin 
 * 密码:admin
+
 [前台地址](http://demo.55youtao.com)
 * 用户:xiao@qq.com 
 * 密码:123456
