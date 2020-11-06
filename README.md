@@ -1,3 +1,4 @@
+#wordtrain
 ##后台生成合并docx和pdf 使用py pywin32包
 ####测试网站 http://demo.55youtao.com/
 导入mysql文件 ks.sql
@@ -106,3 +107,4 @@ www  WEB部署目录（或者子目录）
 ├─think                 命令行入口文件
 ~~~
 
+#wordtrain
