@@ -107,5 +107,6 @@ www  WEB部署目录（或者子目录）
 ├─README.md             README 文件
 ├─think                 命令行入口文件
 ~~~
-
+联系QQ群:37763278
+联系邮箱:386378183@qq.com
 #wordtrain
