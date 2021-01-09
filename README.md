@@ -13,11 +13,14 @@ config/adatabase.php
 
 生成docx 和pdf  使用了pywin32所以只能在windos上面跑
 
-安装 python 3.9 导入包
+安装 python 3.8.7 导入包
 
 ``` 
-pip install pywin32
+
+py -m pip install --upgrade pip
 pip install requests 
+pip install pywin32
+
 ``` 
 更改py/test.py文件里
 
